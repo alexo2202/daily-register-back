@@ -1,8 +1,10 @@
 from src.utils.configuration import get_operation
 from src.business.register_event_business import register_event_business
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def get_data_connection():
     connection = get_operation()
